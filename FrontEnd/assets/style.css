@@ -384,3 +384,76 @@ EDIT BUTTON
 
     background-color: #14483f;
 }
+
+/* =========================
+FILTERS
+========================= */
+
+.filters {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 50px;
+}
+
+.filters button {
+
+    font-family: 'Syne';
+
+    font-size: 18px;
+
+    font-weight: 690;
+
+    color: #1D6154;
+
+    background-color: white;
+
+    border: 1px solid #1D6154;
+
+    border-radius: 60px;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.filters button:hover {
+
+    background-color: #1D6154;
+
+    color: white;
+}
+
+.filters button.active {
+
+    background-color: #1D6154;
+
+    color: white;
+}
+
+nav a {
+
+    text-decoration: none;
+
+    color: black;
+}
+
+nav a:hover {
+
+    color: #B1663C;
+}
+
+nav ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}

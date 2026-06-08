@@ -127,15 +127,21 @@ function displayFilters(categories) {
     filters.innerHTML = "";
 
     // bouton Tous
-    const allButton = document.createElement("button");
+   const allButton = document.createElement("button");
 
-    allButton.innerText = "Tous";
+allButton.innerText = "Tous";
 
-    allButton.addEventListener("click", () => {
+allButton.classList.add("active");
+   allButton.addEventListener("click", () => {
 
-        displayWorks(allWorks);
-    });
+    document
+        .querySelectorAll(".filters button")
+        .forEach(btn => btn.classList.remove("active"));
 
+    allButton.classList.add("active");
+
+    displayWorks(allWorks);
+});
     filters.appendChild(allButton);
 
     // catégories
