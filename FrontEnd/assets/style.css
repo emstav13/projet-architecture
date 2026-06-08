@@ -53,6 +53,30 @@ body {
 	font-family: 'Work Sans' ;
 	font-size: 14px;
 }
+#edit-banner {
+
+    position: relative;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100vw;
+
+    height: 59px;
+
+    background: black;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+}
 header {
 	display: flex;
 	justify-content: space-between;
@@ -430,12 +454,6 @@ FILTERS
     color: white;
 }
 
-.filters button.active {
-
-    background-color: #1D6154;
-
-    color: white;
-}
 
 nav a {
 
@@ -444,10 +462,7 @@ nav a {
     color: black;
 }
 
-nav a:hover {
 
-    color: #B1663C;
-}
 
 nav ul {
 
@@ -456,4 +471,123 @@ nav ul {
     align-items: center;
 
     gap: 15px;
+}
+
+
+nav a.active {
+
+    font-weight: 700;
+}
+
+/* LOGIN PAGE */
+
+.login-section {
+
+    width: 380px;
+
+    margin: 150px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.login-section h2 {
+
+    margin-bottom: 35px;
+}
+
+#login-form {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+#login-form label {
+
+    margin-bottom: 8px;
+
+    color: #3D3D3D;
+}
+
+#login-form input {
+
+    height: 50px;
+
+    border: none;
+
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.09);
+
+    margin-bottom: 30px;
+}
+
+#login-form button {
+
+    width: 180px;
+
+    height: 36px;
+
+    margin: 0 auto;
+
+    border: none;
+
+    border-radius: 60px;
+
+    background: #1D6154;
+
+    color: white;
+
+    font-family: 'Syne';
+
+    cursor: pointer;
+}
+
+.forgot-password {
+
+    margin-top: 30px;
+
+    color: #3D3D3D;
+
+    font-size: 14px;
+}
+
+.active {
+
+    font-weight: 700;
+
+    color: black;
+}
+
+#error-message {
+
+    color: red;
+
+    margin-top: 15px;
+}
+
+.edit-icon {
+
+
+    width: 15px;
+
+    height: 15px;
+
+    filter: invert(1);
+}
+
+
+ /*instagram icon*/ 
+
+nav img {
+
+    width: 18px;
+
+    height: px;
+
+      
 }

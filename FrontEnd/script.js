@@ -131,14 +131,8 @@ function displayFilters(categories) {
 
 allButton.innerText = "Tous";
 
-allButton.classList.add("active");
    allButton.addEventListener("click", () => {
 
-    document
-        .querySelectorAll(".filters button")
-        .forEach(btn => btn.classList.remove("active"));
-
-    allButton.classList.add("active");
 
     displayWorks(allWorks);
 });
@@ -313,4 +307,20 @@ addPhotoForm.addEventListener("submit", async (event) => {
 
         addPhotoButton.style.display = "block";
     }
+});
+
+
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.forEach(item => {
+            item.classList.remove("active");
+        });
+
+        link.classList.add("active");
+    });
+
 });
