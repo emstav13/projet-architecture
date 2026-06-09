@@ -163,39 +163,69 @@
 
 		<div class="modal-content">
 
-			<span id="close-modal">&times;</span>
+<span id="back-modal">&#8592;</span>
+<span id="close-modal">&times;</span>
+			<h3 id="modal-title">Galerie photo</h3>
 
-			<h3>Galerie photo</h3>
+		
 
-			<!-- gallery modal -->
-			<div class="modal-gallery"></div>
+        <!-- GALLERY -->
+        <div class="modal-gallery"></div>
 
-			<!-- add photo button -->
-			<button id="add-photo-button">
-				Ajouter une photo
-			</button>
+                  <hr class="separator">
 
-			<!-- form add photo -->
-			<form id="add-photo-form" style="display:none;">
+        <button id="add-photo-button">
+            Ajouter une photo
+        </button>
 
-				<input type="file" id="image">
+        <!-- FORM AJOUT PHOTO -->
+        <form id="add-photo-form" style="display:none;">
 
-				<input
-					type="text"
-					id="title"
-					placeholder="Titre">
+            <div class="image-preview">
 
-				<select id="category"></select>
-                    <hr class="separator">
-				<button type="submit">
-					Valider
-				</button>
+                <img
+                    id="preview-image"
+                    src="./assets/icons/instagram.png"
+                    alt=""
+                >
 
-			</form>
+                <label for="image" class="upload-button">
+                    + Ajouter photo
+                </label>
 
-		</div>
+                <input
+                    type="file"
+                    id="image"
+                    accept="image/png, image/jpeg"
+                    hidden
+                >
 
-	</div>
+                <p>jpg, png : 4mo max</p>
+
+            </div>
+
+            <label for="title">Titre</label>
+
+            <input
+                type="text"
+                id="title"
+            >
+
+            <label for="category">Catégorie</label>
+
+            <select id="category"></select>
+
+<hr class="separator-form">
+
+<button type="submit">
+    Valider
+</button>
+
+        </form>
+
+    </div>
+
+</div>
 
 	<!-- JS -->
 	<script src="script.js"></script>
