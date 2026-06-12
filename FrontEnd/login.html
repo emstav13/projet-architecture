@@ -1,67 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Login</title>
 
-    <link rel="stylesheet" href="./assets/style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
 
-<header>
-    <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
 
-<nav>
-    <ul>
-        <li><a href="index.html#portfolio">projets</a></li>
-        <li><a href="index.html#contact">contact</a></li>
-        <li><a href="login.html" class="active">login</a></li>
-        <li>
-            <img src="./assets/icons/instagram.png" alt="Instagram">
-        </li>
-    </ul>
-</nav>
-</header>
+  <body>
+    <header>
+      <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 
-<main>
-
-<section class="login-section">
-
-    <h2>Log In</h2>
-
-    <form id="login-form">
-
-    <label for="email">E-mail</label>
-    <input type="email" id="email">
-
-    <label for="password">Mot de passe</label>
-    <input type="password" id="password">
-
-    <button type="submit">
-        Se connecter
-    </button>
-
-</form>
-
-<p id="error-message"></p>
-
-<a href="#" class="forgot-password">
-    Mot de passe oublié
-</a>
-
-</section>
-
-</main>
-<footer>
-    <nav>
+      <nav>
         <ul>
-            <li>Mentions légales</li>
-        </ul>
-    </nav>
-</footer>
-<script src="login.js"></script>
+          <li><a href="index.html#portfolio">projets</a></li>
+          <li><a href="index.html#contact">contact</a></li>
+          <li><a href="login.html" class="active">login</a></li>
 
-</body>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="./assets/icons/instagram.png" alt="Instagram" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="login-section">
+        <h2>Log In</h2>
+
+        <form id="login-form">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" />
+
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" />
+
+          <button type="submit">Se connecter</button>
+        </form>
+
+        <p id="error-message"></p>
+
+        <a href="#" class="forgot-password"> Mot de passe oublié </a>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li>Mentions légales</li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="login.js"></script>
+  </body>
 </html>
