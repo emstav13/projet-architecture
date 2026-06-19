@@ -76,15 +76,23 @@ function displayFilters(categories) {
 }
 
 function displayCategoryOptions(categories) {
+
   const select = document.getElementById("category");
+
+  select.innerHTML = `
+    <option value="" selected disabled hidden></option>
+  `;
+
   categories.forEach((category) => {
+
     const option = document.createElement("option");
+
     option.value = category.id;
     option.innerText = category.name;
+
     select.appendChild(option);
   });
 }
-
 getWorks();
 getCategories();
 
@@ -167,27 +175,47 @@ backModal.addEventListener("click", () => {
 });
 
 addPhotoForm.addEventListener("submit", async (event) => {
+
   event.preventDefault();
+
   const image = document.getElementById("image").files[0];
-  const title = document.getElementById("title").value;
+  const title = document.getElementById("title").value.trim();
   const category = document.getElementById("category").value;
+
+  // Vérification des champs
+  if (!image || !title || !category) {
+    alert("Tous les champs sont obligatoires");
+    return;
+  }
+
   const formData = new FormData();
+
   formData.append("image", image);
   formData.append("title", title);
   formData.append("category", category);
+
   const response = await fetch("http://localhost:5678/api/works", {
+
     method: "POST",
-    headers: { Authorization: `Bearer ${token}` },
-    body: formData,
+
+    headers: {
+      Authorization: `Bearer ${token}`
+    },
+
+    body: formData
   });
+
   if (response.ok) {
+
     await getWorks();
+
     addPhotoForm.reset();
+
     resetPreview();
+
     goToGallery();
   }
 });
-
 const navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -201,7 +229,7 @@ const previewImage = document.getElementById("preview-image");
 const uploadButton = document.querySelector(".upload-button");
 const uploadText = document.querySelector(".image-preview p");
 
-// ✅ FIX 1 : Cacher le texte et le bouton quand une photo est sélectionnée
+//  Cacher le texte et le bouton quand une photo est sélectionnée
 imageInput.addEventListener("change", function () {
   const file = this.files[0];
   if (file) {
@@ -213,7 +241,7 @@ imageInput.addEventListener("change", function () {
     uploadText.style.display = "none";
   }
 });
-// ✅ FIX 2 : Réafficher le texte et le bouton lors du reset
+//  Réafficher le texte et le bouton lors du reset
 function resetPreview() {
   document.getElementById("preview-placeholder").style.display = "block";
   previewImage.style.display = "none";
